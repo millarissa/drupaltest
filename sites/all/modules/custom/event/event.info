@@ -1,0 +1,5 @@
+name = Event
+description = Custom event module.
+package = Event
+version = VERSION
+core = 7.x

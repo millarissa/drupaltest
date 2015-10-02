@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function event_menu() {
+  $items = array();
+  $items['events'] = array(
+    'title' => 'Form for events',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('event_register'),
+    'access callback' => TRUE,
+    'file' => 'event.pages.inc',
+  );
+  $items['event/%'] = array(
+    'title' => 'Event info',
+    'page callback' => 'event_callback',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'file' => 'event.pages.inc',
+  );
+
+
+  return $items;
+}
+
