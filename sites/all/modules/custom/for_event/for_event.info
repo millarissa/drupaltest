@@ -1,0 +1,5 @@
+name = For event
+description = Custom module.
+package = Event
+version = VERSION
+core = 7.x

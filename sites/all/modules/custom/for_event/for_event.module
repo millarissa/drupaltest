@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements custom_hook_notice()
+ */
+function hook_notice() {
+
+}

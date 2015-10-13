@@ -67,5 +67,17 @@ function event_callback($id) {
     '#markup' => t('Number: @number<br>', array('@number'=>$row['number']))
   );
 
+  $output[] = module_invoke_all('notice');
+
   return $output;
+}
+
+/**
+ * Implements custom hook_notice().
+ */
+
+function event_notice() {
+  return $output = array(
+    '#markup' => t("This is a notice text. It means that hook is working."),
+  );
 }
